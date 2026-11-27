@@ -27,8 +27,9 @@ jobs:
 
       - name: Extract source
         run: |
-        unzip -q iOS_Fusion_Launcher_2.0.0_Sprint1_Source-1.zip -d source
-      
+          unzip -q iOS_Fusion_Launcher_2.0.0_Sprint1_Source-1.zip -d source
+          find source -maxdepth 4 -type f | head -50
+
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
